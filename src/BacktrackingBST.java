@@ -121,47 +121,6 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         }
     }
 
-    public void delete2(Node node) {
-        argCheck(node);
-        System.out.println("called to delete " + node.getKey());
-        if (!backtracking) {
-            stack.push(new Node(node));
-            System.out.println("just pushed " + node.getKey());
-        }
-        if (node == root && root.left == null && root.right == null) {
-            root = null;
-            return;
-        }
-        boolean selfIsLeftChild = (node.parent.left == node);
-        if (node.left == null & node.right == null) { // node is a leaf
-            setParent(node, selfIsLeftChild);
-        } else if (node.left == null) {// node has only right child
-            node.right.parent = node.parent;
-            setParent(node, selfIsLeftChild);
-        } else if (node.right == null) { // node has only left child
-            node.left.parent = node.parent;
-            setParent(node, selfIsLeftChild);
-        } else { // node has two children
-            Node y = successor(node); // will always have successor because has 2 childs.
-            node.key = y.getKey();
-            node.value = y.getValue();
-            if (y.parent.left == y)
-                y.parent.left = null;
-            else {
-                y.parent.right = null;
-            }
-            y.parent = node.parent;
-        }
-
-    }
-
-    private void setParent(Node node, boolean condition) {
-        if (condition)
-            node.parent.left = node.left;
-        else
-            node.parent.right = node.right;
-    }
-
     public Node minimum() {
         return findMin(root);
     }
