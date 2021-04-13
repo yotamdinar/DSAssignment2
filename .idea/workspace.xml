@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c3e8ef-2b80-4441-8885-d390ac010116" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BacktrackingBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BacktrackingBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>384</line>
+          <line>343</line>
           <option name="timeStamp" value="125" />
         </line-breakpoint>
       </breakpoints>

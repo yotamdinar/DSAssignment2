@@ -158,64 +158,68 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         backtracking = true;
         if (!stack.isEmpty()) {
             Node node = (Node) stack.pop();
-            System.out.println("popping " + node.getKey());
+//            System.out.println("popping " + node.getKey());
             Node currentNode = search(node.getKey());
             if (currentNode != null) {
                 // backtracking insertion
                 // node is always inserted as a leaf, so deletion is direct.
-                System.out.println("backtracking insertion, deleting " + node.getKey());
+//                System.out.println("backtracking insertion, deleting " + node.getKey());
                 delete(currentNode);
             } else {
                 // backtracking deletion. node = deleted node.
-                if (node.parent != null) {
-                    if (node.getKey() < node.parent.getKey()) {
+                if (node.parent==null){
+                    backtrackRootDeletion(node);
+                    return;
+                }
+                boolean selfWasALeftChild = node.parent.left == node;
+                if (node.left==null && node.right == null){ // node was a leaf
+                    insert(node);
+                }
+                else if (node.left == null){                // node had only right child
+                    node.right.parent = node;
+                    if (selfWasALeftChild){
                         node.parent.left = node;
-                    } else {
+                    }
+                    else{
                         node.parent.right = node;
                     }
+                }
+                else if (node.right == null){               // node had only left child
+                    node.left.parent = node;
+                    if (selfWasALeftChild){
+                        node.parent.left = node;
+                    }
+                    else{
+                        node.parent.right = node;
+                    }
+                }
+                else{                                       // node had two children
+
+                }
+                if (node.getKey() < node.parent.getKey()) {
+                    node.parent.left = node;
+                } else {
+                    node.parent.right = node;
                 }
                 if (node.left != null)
                     node.left.parent = node;
                 if (node.right != null)
                     node.right.parent = node;
-
-//                if (node.left!=null && node.right!=null) {
-//                    //deleted node had 2 children
-//                    Node replacedNode = node.left.parent;
-//                    if (node.key < node.parent.key) {// node was a left child
-//                        node.parent.left = node;
-//                        System.out.println("setting the left child of " + node.parent.getKey() + " to be " + node.getKey());
-//                    }
-//                    else { // node was a right child
-//                        System.out.println("setting the right child of " + node.parent.getKey() + " to be " + node.getKey());
-//                        node.parent.right = node;
-//                    }
-//                    node.left.parent = node;
-//                    node.right.parent = node;
-//                    System.out.println("set the parent of " + node.left.getKey() + " and " + node.right.getKey() + " to be " + node.getKey());
-//                    System.out.println("backtracking deletion, inserting " + replacedNode.getKey());
-////                    insert(replacedNode);
-//                }
-//                else if (node.left!=null) {
-//                    // deleted node had 1 left child
-//                    if (node.getKey()<node.parent.getKey()) // node was a left child
-//                        node.parent.left=node;
-//                    else
-//                        node.parent.right = node;
-//                    node.left.parent = node;
-//                }
-//                else if (node.right!=null){
-//                    // deleted node had 1 right child
-//                    if (node.getKey()<node.parent.getKey()) // node was a left child
-//                        node.parent.left = node;
-//                    else
-//                        node.parent.right = node;
-//                    node.right.parent = node;
-//                }
-//                else // node was a leaf
-//                    insert(node);
             }
             backtracking = false;
+        }
+    }
+
+    public void backtrackRootDeletion(Node previousRoot){
+        if (previousRoot.left == null && previousRoot.right == null){       // root was a leaf
+            insert(previousRoot);
+        }
+        else if (previousRoot.left == null || previousRoot.right == null){  // root had only right child or left child
+            root.parent=previousRoot;
+            root = previousRoot;
+        }
+        else {                                                              // root had two children
+
         }
     }
 
