@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c3e8ef-2b80-4441-8885-d390ac010116" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/ADTSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Array.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Backtrack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/BacktrackingArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/BacktrackingBST$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/BacktrackingBST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/BacktrackingSortedArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Consistency.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/IntegrityStatement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Question4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Stack$StackElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Assignment2/Warmup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BacktrackingArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BacktrackingArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BacktrackingBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BacktrackingBST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Warmup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Warmup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +99,7 @@
       <workItem from="1617798424691" duration="151000" />
       <workItem from="1617798593710" duration="112000" />
       <workItem from="1617798729955" duration="3124000" />
-      <workItem from="1618245732285" duration="22979000" />
+      <workItem from="1618245732285" duration="31247000" />
     </task>
     <servers />
   </component>
@@ -146,93 +130,59 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>312</line>
-          <option name="timeStamp" value="60" />
+          <line>387</line>
+          <option name="timeStamp" value="125" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="62" />
+          <line>71</line>
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="63" />
+          <line>72</line>
+          <option name="timeStamp" value="127" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="71" />
+          <line>77</line>
+          <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>85</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>92</line>
-          <option name="timeStamp" value="81" />
+          <line>84</line>
+          <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
           <line>93</line>
-          <option name="timeStamp" value="82" />
+          <option name="timeStamp" value="130" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="83" />
+          <line>78</line>
+          <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="84" />
+          <line>79</line>
+          <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="86" />
+          <line>80</line>
+          <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>100</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>103</line>
-          <option name="timeStamp" value="91" />
+          <line>81</line>
+          <option name="timeStamp" value="134" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="BacktrackingBST$Node" memberName="parent" />
         <PinnedItemInfo parentTag="BacktrackingArray" memberName="pointer" />
       </pinned-members>
     </pin-to-top-manager>
