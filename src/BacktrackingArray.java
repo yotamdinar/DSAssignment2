@@ -1,5 +1,3 @@
-
-
 public class BacktrackingArray implements Array<Integer>, Backtrack {
     private Stack stack;
     private int[] arr;
@@ -37,14 +35,13 @@ public class BacktrackingArray implements Array<Integer>, Backtrack {
     @Override
     public void insert(Integer x) {
         if (search(x) == -1) {
-            if (checkSize()) {
-                arr[pointer] = x;
-                pointer++;
-                backtrackInsert=Boolean.TRUE;
-                backtrackIndex = pointer - 1;
-                handleMinMaxInsert();
-            } else
+            if (!checkSize())
                 throw new RuntimeException("Set storage is full");
+            arr[pointer] = x;
+            pointer++;
+            backtrackInsert=Boolean.TRUE;
+            backtrackIndex = pointer - 1;
+            handleMinMaxInsert();
         }
     }
 
@@ -151,21 +148,23 @@ public class BacktrackingArray implements Array<Integer>, Backtrack {
         return (index < pointer && index >= 0);
     }
 
+    /**
+     * the function updates attributes minIndex, maxIndex after insertion to the Set.
+     */
     public void handleMinMaxInsert() {
         int newElementIndex = pointer - 1;
         //determine minIndex after insertion
         if (minIndex != -1) {
-            if (arr[newElementIndex] < arr[minIndex]) {
+            if (arr[newElementIndex] < arr[minIndex]) //determine if minIndex should be updated
                 minIndex = newElementIndex;
-            }
-        } else
-            minIndex = newElementIndex;
-        //handling maxIndex
-        if (maxIndex != -1) {
-            if (arr[newElementIndex] > arr[maxIndex])
+            if (arr[newElementIndex] > arr[maxIndex]) //determine if maxIndex should be updated
                 maxIndex = newElementIndex;
-        } else
+        }
+        else {
+            // of course maxIndex is also -1 at this point
+            minIndex = newElementIndex;
             maxIndex = newElementIndex;
+        }
     }
 
     public void handleMinDelete(int index) {

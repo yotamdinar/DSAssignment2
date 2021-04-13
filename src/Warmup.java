@@ -1,17 +1,17 @@
 public class Warmup {
     public static int backtrackingSearch(int[] arr, int x, int forward, int back, Stack myStack) {
-        int step = forward;
-        for (int i=0;i<arr.length;i++){
-            if (arr[i]==x)
+        int step = 0;
+        for (int i = 0; i < arr.length; i++) { // beginning of the step
+            if (step == forward) {
+                for (int j = 0; j < back; j++)
+                    i = (int)myStack.pop();
+                step = 0;
+            }
+            if (arr[i] == x)
                 return i;
             myStack.push(i);
-            if (step==1){
-                for (int j=0;j<back;j++)
-                    myStack.pop();
-                i=i-back+1;
-                step = forward;
-            }
-            step--;
+            step++;
+            // end of step
         }
         return -1;
     }
@@ -22,12 +22,12 @@ public class Warmup {
         while (high >= low) {
             int mid = (low + high) / 2;
             int inconsistencies = Consistency.isConsistent(arr);
-            while (inconsistencies > 0 & !myStack.isEmpty()){
-                int lastMid = (Integer)myStack.pop();
-                if (mid>lastMid)
-                    low=2*lastMid-high;
+            while (inconsistencies > 0 & !myStack.isEmpty()) {
+                int lastMid = (Integer) myStack.pop();
+                if (mid > lastMid)
+                    low = 2 * lastMid - high;
                 else
-                    high=2*lastMid-low;
+                    high = 2 * lastMid - low;
                 mid = lastMid;
                 inconsistencies--;
 
