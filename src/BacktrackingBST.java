@@ -63,14 +63,13 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
             y.left = node;
         else
             y.right = node;
-        if (!backtracking) {
-            stack.push(new Node(node));
-            System.out.println("pushing " + node.getKey());
-        }
+        stack.push(new Node(root));
+        System.out.println("pushing " + node.getKey());
     }
 
     public void delete(Node node) {
         argCheck(node);
+        stack.push(new Node(root));
         if (node == root) {
             deleteRoot();
             return;
@@ -152,6 +151,12 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         return y;
     }
 
+    public void backtrack2(){
+        if (!stack.isEmpty()){
+            Node previousRoot = (Node)stack.pop();
+            root = previousRoot;
+        }
+    }
     @Override
     public void backtrack() {
         System.out.println("called to backtrack");
@@ -194,6 +199,7 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
                     }
                 }
                 else{                                       // node had two children
+
 
                 }
                 if (node.getKey() < node.parent.getKey()) {
@@ -333,17 +339,23 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         tree.insert(new Node(4, "4"));
         tree.insert(new Node(5, "5"));
         System.out.println(tree);
-        tree.delete(tree.search(2));
+        tree.backtrack2();
         System.out.println(tree);
-        tree.delete(tree.search(5));
+        tree.backtrack2();
         System.out.println(tree);
-        tree.delete(tree.search(4));
+        tree.backtrack2();
         System.out.println(tree);
-        tree.delete(tree.search(1));
-        System.out.println(tree);
-        tree.insert(new Node(1, "1"));
-        System.out.println(tree);
-        tree.delete(tree.search(1));
-        System.out.println(tree);
+//        tree.delete(tree.search(2));
+//        System.out.println(tree);
+//        tree.delete(tree.search(5));
+//        System.out.println(tree);
+//        tree.delete(tree.search(4));
+//        System.out.println(tree);
+//        tree.delete(tree.search(1));
+//        System.out.println(tree);
+//        tree.insert(new Node(1, "1"));
+//        System.out.println(tree);
+//        tree.delete(tree.search(1));
+//        System.out.println(tree);
     }
 }
