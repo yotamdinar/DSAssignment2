@@ -59,11 +59,15 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         node.parent = y;
         if (y == null)
             root = node;
-        else if (node.key < y.key)
-            y.left = node;
-        else
-            y.right = node;
-        stack.push(new Node(root));
+        else {
+            y.isLeaf = false;
+            if (node.key < y.key)
+                y.left = node;
+            else
+                y.right = node;
+        }
+        node.isLeaf = true;
+        stack.push(new Node(node));
         System.out.println("pushing " + node.getKey());
     }
 
@@ -81,6 +85,7 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
             else {
                 node.parent.right = null;
             }
+            node.parent.isLeaf= node.parent.left==null && node.parent.right==null;
         } else if (node.left == null) { // node has only right child
             node.right.parent = node.parent;
             if (selfIsALeftChild) {
@@ -244,7 +249,7 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         if (node.left != null) {
             acc = toString2(node.left, acc, depth + 1);
         }
-        acc = acc + twodSpaces(depth) + node.key + "\n";
+        acc = acc + twodSpaces(depth) + node.key + node.isLeaf + "\n";
         if (node.right != null)
             acc = toString2(node.right, acc, depth + 1);
         return acc;
@@ -305,10 +310,12 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         private BacktrackingBST.Node parent;
         private int key;
         private Object value;
+        private boolean isLeaf;
 
         public Node(int key, Object value) {
             this.key = key;
             this.value = value;
+            this.isLeaf = true;
         }
 
         public Node(Node node) {
@@ -317,6 +324,7 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
             this.left = node.left;
             this.right = node.right;
             this.parent = node.parent;
+            this.isLeaf = node.isLeaf;
         }
 
         public int getKey() {
@@ -337,25 +345,23 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         tree.insert(new Node(6, "6"));
         tree.insert(new Node(1, "1"));
         tree.insert(new Node(4, "4"));
+        tree.insert(new Node(3, "3"));
+        tree.insert(new Node(10, "10"));
         tree.insert(new Node(5, "5"));
+        tree.insert(new Node(9, "9"));
+        tree.delete(tree.search(2));
         System.out.println(tree);
-        tree.backtrack2();
+        tree.delete(tree.search(5));
         System.out.println(tree);
-        tree.backtrack2();
+        tree.delete(tree.search(4));
         System.out.println(tree);
-        tree.backtrack2();
+        tree.delete(tree.search(1));
         System.out.println(tree);
-//        tree.delete(tree.search(2));
-//        System.out.println(tree);
-//        tree.delete(tree.search(5));
-//        System.out.println(tree);
-//        tree.delete(tree.search(4));
-//        System.out.println(tree);
-//        tree.delete(tree.search(1));
-//        System.out.println(tree);
-//        tree.insert(new Node(1, "1"));
-//        System.out.println(tree);
-//        tree.delete(tree.search(1));
-//        System.out.println(tree);
+        tree.insert(new Node(1, "1"));
+        System.out.println(tree);
+        tree.delete(tree.search(1));
+        System.out.println(tree);
+        tree.delete(tree.search(8));
+        System.out.println(tree);
     }
 }
