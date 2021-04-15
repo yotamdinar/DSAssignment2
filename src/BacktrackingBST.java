@@ -163,10 +163,12 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
     }
 
     public Node minimum() {
+        argCheck(root);
         return findMin(root);
     }
 
     public Node maximum() {
+        argCheck(root);
         return findMax(root);
     }
 
@@ -362,12 +364,6 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
             return value;
         }
 
-    }
-
-    public static void changeString(String s2) {
-        System.out.println(System.identityHashCode(s2));
-        s2 = s2 + "ddd";
-        System.out.println(System.identityHashCode(s2));
     }
 
     public static void main(String[] args) {

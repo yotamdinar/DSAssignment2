@@ -31,7 +31,7 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -44,6 +44,8 @@
       </method>
     </configuration>
     <configuration name="BacktrackingBST" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="BacktrackingBST" />
       <module name="DSAssignment2" />
       <method v="2">
@@ -64,17 +66,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.BacktrackingArray" />
+      <item itemvalue="Application.BacktrackingBST" />
+      <item itemvalue="Application.BacktrackingSortedArray" />
+      <item itemvalue="Application.Warmup" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BacktrackingBST" />
@@ -100,6 +97,8 @@
       <workItem from="1617798593710" duration="112000" />
       <workItem from="1617798729955" duration="3124000" />
       <workItem from="1618245732285" duration="31814000" />
+      <workItem from="1618496123464" duration="1032000" />
+      <workItem from="1618497309039" duration="480000" />
     </task>
     <servers />
   </component>
@@ -128,11 +127,6 @@
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="30" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BacktrackingBST.java</url>
-          <line>384</line>
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
