@@ -228,10 +228,6 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         // TODO: implement your code here
     }
 
-    public void printTreeView() {
-
-    }
-
     public String toString() {
         return toString2(root, "", 0);
     }
@@ -327,12 +323,6 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
 
     }
 
-    public static void changeString(String s2) {
-        System.out.println(System.identityHashCode(s2));
-        s2 = s2 + "ddd";
-        System.out.println(System.identityHashCode(s2));
-    }
-
     public static void main(String[] args) {
         BacktrackingBST tree = new BacktrackingBST(new Stack(), new Stack());
         tree.insert(new Node(8, "8"));
@@ -355,8 +345,5 @@ public class BacktrackingBST implements Backtrack, ADTSet<BacktrackingBST.Node> 
         System.out.println(tree);
         tree.delete(tree.search(1));
         System.out.println(tree);
-
-
     }
-
 }
