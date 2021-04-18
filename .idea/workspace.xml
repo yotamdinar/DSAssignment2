@@ -2,16 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74c3e8ef-2b80-4441-8885-d390ac010116" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yotam/src/Consistency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yotam/src/Stack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yotam/src/Warmup2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BacktrackingBST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BacktrackingBST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1qRQzy5VHGPBhADqCm1VU83YFDT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -31,11 +48,21 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.BacktrackingBST">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="?" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BacktrackingArray">
     <configuration name="BacktrackingArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BacktrackingArray" />
       <module name="DSAssignment2" />
@@ -66,18 +93,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Warmup2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Warmup2" />
+      <module name="yotam" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.BacktrackingArray" />
       <item itemvalue="Application.BacktrackingBST" />
       <item itemvalue="Application.BacktrackingSortedArray" />
       <item itemvalue="Application.Warmup" />
+      <item itemvalue="Application.Warmup2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BacktrackingBST" />
         <item itemvalue="Application.BacktrackingArray" />
-        <item itemvalue="Application.Warmup" />
         <item itemvalue="Application.BacktrackingSortedArray" />
+        <item itemvalue="Application.Warmup2" />
+        <item itemvalue="Application.Warmup" />
+        <item itemvalue="Application.BacktrackingBST" />
       </list>
     </recent_temporary>
   </component>
@@ -135,5 +171,9 @@
         <PinnedItemInfo parentTag="BacktrackingArray" memberName="pointer" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DSAssignment2$BacktrackingArray.ic" NAME="BacktrackingArray Coverage Results" MODIFIED="1618633723397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/DSAssignment2$BacktrackingSortedArray.ic" NAME="BacktrackingSortedArray Coverage Results" MODIFIED="1618633680538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
